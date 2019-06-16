@@ -25,18 +25,18 @@ function readLine() {
 
 // Complete the countingValleys function below.
 function countingValleys(n, s) {
-    console.log({n, s});
+    //console.log({n, s});
     let elevation = 0;
     let valleyCount = 0;
     let inValley = false;
     s.split('').forEach((element) => {
         if (element === 'U') {
             elevation++;
-            if (inValley && elevation === 0 ) {
+            if (inValley && elevation === 0) {
                 valleyCount++;
             }
         } else {
-            elevation--;   
+            elevation--;
         }
         inValley = elevation < 0;
         console.log({elevation, inValley, valleyCount});
